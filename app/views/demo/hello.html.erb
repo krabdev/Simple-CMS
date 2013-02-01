@@ -1,6 +1,8 @@
 <h1>Demo#Hello</h1>
 <p>Hello World!</p>
 
+ID: <%= params[:id] %>
+
 <% @array.each do |n| %>
 <%= n %> <br/>
 <% end %>
@@ -9,8 +11,11 @@
  <%= @some_var %>
 
 </h3>
-<% 3.times do %>
+<% 3.times do |n|%>
 <h4>
-   <%= link_to("My first link", {:action => "index"}) %>
+   <%= link_to("My first link",
+         {:action => "hello",
+          :id => n,
+          :name => "Andreas"}) %>
 </h4>
 <% end %>
