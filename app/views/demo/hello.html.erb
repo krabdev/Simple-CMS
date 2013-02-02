@@ -1,21 +1,14 @@
 <h1>Demo#Hello</h1>
 <p>Hello World!</p>
 
-ID: <%= params[:id] %>
-
-<% @array.each do |n| %>
-<%= n %> <br/>
-<% end %>
-
-<h3>
- <%= @some_var %>
-
-</h3>
-<% 3.times do |n|%>
-<h4>
-   <%= link_to("My first link",
-         {:action => "hello",
-          :id => n,
-          :name => "Andreas"}) %>
-</h4>
-<% end %>
+<%= link_to("reload with params",
+         { :action => "hello",
+           :id => "20",
+           :page => "5",
+           :flex => "7"}) %>
+<br/>
+PAGE : <%= @page %> <br/>
+ID : <%= @id %>
+FLEX : <%= @flex %>
+<hr/>
+<%= params.inspect %>

@@ -1,12 +1,15 @@
 class DemoController < ApplicationController
 
+#index view
   def index
     render('index')
   end
 
+#hello view
   def hello
-   @array = [1,2,3,4,5, "a", "a8"]
-   @some_var = "Andreas"
+   @id = params[:id]
+   @page = params[:page]
+   @flex = params[:flex]
 
   end
 
